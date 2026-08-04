@@ -1,0 +1,31 @@
+/*
+   Aim  : WAP to store and display student information of few students.
+          Information like name, uin, cgpa.
+   Coder: Pritam nagargoje
+   UIN : 241P060
+ */
+
+
+public class calculator {
+    int a;
+    int b;
+
+    public calculator() {
+        this.a = 0;
+        this.b = 0;
+    }
+
+    public calculator(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public static void main(String[] args) {
+        calculator c1 = new calculator();
+        System.out.println("A:"+c1.a+" B:"+c1.b);
+        
+
+        calculator c2 = new calculator(3,4);
+        System.out.println("A:"+c2.a+" B:"+c2.b);
+    }
+}
