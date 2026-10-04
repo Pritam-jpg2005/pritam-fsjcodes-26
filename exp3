@@ -1,0 +1,174 @@
+/*
+Aim: Programs on various types of inheritance and exception handling
+Name: Pritam Nagargoje
+Class: SE COMPS A
+UIN: 241P060
+ROLL NO: 35
+*/
+
+import java.util.Scanner;
+
+class Person {
+    private String name;
+    private String gender;
+    private int age;
+    private String mobileNumber;
+
+    Person(String name, String gender, int age, String number) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.mobileNumber = number;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Gender: " + gender);
+        System.out.println("Age: " + age);
+        System.out.println("Mobile No.: " + mobileNumber);
+    }
+}
+
+class Employee extends Person {
+    private String role;
+    private double salary;
+    private String employeeId;
+    private int experience;
+
+    Employee(String name, String gender, int age, String number,
+             String role, double salary, String id, int experience) {
+
+        super(name, gender, age, number);
+        this.role = role;
+        this.salary = salary;
+        this.employeeId = id;
+        this.experience = experience;
+    }
+
+    void display() {
+        super.display();
+        System.out.println("Position: " + role);
+        System.out.println("Salary: " + salary);
+        System.out.println("Employee Id: " + employeeId);
+        System.out.println("Experience: " + experience);
+    }
+}
+
+class Manager extends Employee {
+    private String department;
+    private int no_of_project_completed;
+
+    Manager(String name, String gender, int age, String number,
+            String role, double salary, String id, int experience,
+            String department, int project) {
+
+        super(name, gender, age, number, role, salary, id, experience);
+        this.department = department;
+        this.no_of_project_completed = project;
+    }
+
+    void display() {
+        super.display();
+        System.out.println("Department: " + department);
+        System.out.println("Number of project completed: " + no_of_project_completed);
+    }
+}
+
+public class Company {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter the Name: ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter the Gender: ");
+            String gender = sc.nextLine();
+
+            System.out.print("Enter the Age: ");
+            int age = sc.nextInt();
+            sc.nextLine();
+
+            System.out.print("Enter the Mobile Number: ");
+            String number = sc.nextLine();
+
+            System.out.print("Enter the Designation: ");
+            String role = sc.nextLine();
+
+            System.out.print("Enter the Salary: ");
+            double salary = sc.nextDouble();
+            sc.nextLine();
+
+            System.out.print("Enter the Employee ID: ");
+            String id = sc.nextLine();
+
+            System.out.print("Enter the Experience: ");
+            int experience = sc.nextInt();
+            sc.nextLine();
+
+            System.out.print("Enter the Department: ");
+            String department = sc.nextLine();
+
+            System.out.print("Enter the Number of Projects Completed: ");
+            int project = sc.nextInt();
+
+            Manager m1 = new Manager(
+                name,
+                gender,
+                age,
+                number,
+                role,
+                salary,
+                id,
+                experience,
+                department,
+                project
+            );
+
+            System.out.println("\n===== Manager Details =====");
+            m1.display();
+
+        } catch (Exception e) {
+            System.out.println("Invalid Input! Please enter the correct data type.");
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        sc.close();
+    }
+}
+
+
+
+
+Enter the Name: srushti
+Enter the Gender: female
+Enter the Age: 19
+Enter the Mobile Number: 9876543210
+Enter the Designation: Project Manager
+Enter the Salary: 75000
+Enter the Employee ID: EMP102
+Enter the Experience: 5
+Enter the Department: Computer Engineering
+Enter the Number of Projects Completed: 12
+===== Manager Details =====
+Name:  Pritam
+Gender: Male
+Age: 20
+Mobile No.: 9876543210
+Position: Project Manager
+Salary: 75000.0
+Employee Id: EMP102
+Experience: 5
+Department: Computer Engineering
+Number of project completed: 12
+
+
+
+
+
+
+
+
+
+
+
