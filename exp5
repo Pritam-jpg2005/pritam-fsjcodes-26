@@ -1,0 +1,90 @@
+//Name: Pritam Nagargoje
+//Roll No: 241P160 (35)
+//Branch: COMPS(A)-B2
+<html>
+<body>
+ <h2>Hello from JSP!</h2>
+ <form acƟon=”welcome” method=”get”>
+ Enter Your Name: <input type=”text” name=”username”><br>
+ Enter Your Age: <input type=”text” name=”age”><br>
+ <input type=”submit” value=”Submit”>
+ </form>
+</body>
+</html>
+package com.example;
+import java.io.IOExcepƟon;
+import java.io.PrintWriter;
+import akarta.servlet.ServletExcepƟon;
+import akarta.servlet.annotaƟon.WebServlet;
+import akarta.servlet.hƩp.HƩpServlet;
+import akarta.servlet.hƩp.HƩpServletRequest;
+import akarta.servlet.hƩp.HƩpServletResponse;
+@WebServlet(“/welcome”)
+public class WelcomeServlet extends HƩpServlet {
+ @Override
+ protected void doGet(HƩpServletRequest request, HƩpServletResponse response)
+ throws ServletExcepƟon, IOExcepƟon {
+ String name = request.getParameter(“username”);
+ String age = request.getParameter(“age”);
+ response.setContentType(“text/html”);
+ PrintWriter out = response.getWriter();
+ out.println(“<html><body>”);
+ out.println(“<h1>Hello “ + name + “</h1>”);
+ out.println(“<h1>Your age is “ + age + “</h1>”);
+ out.println(“</body></html>”);
+ }
+}
+Index.jsp
+//Name: Pritam Nagargoje
+//Roll No: 241P160 (35)
+//Branch: COMPS(A)-B2
+package com.example;
+import java.io.IOExcepƟon;
+import java.io.PrintWriter;
+import jakarta.servlet.ServletExcepƟon;
+import jakarta.servlet.annotaƟon.WebServlet;
+import jakarta.servlet.hƩp.HƩpServlet;
+import jakarta.servlet.hƩp.HƩpServletRequest;
+import jakarta.servlet.hƩp.HƩpServletResponse;
+@WebServlet("/welcome")
+public class WelcomeServlet extends HƩpServlet {
+ @Override
+ protected void doGet(HƩpServletRequest request, HƩpServletResponse response)
+ throws ServletExcepƟon, IOExcepƟon {
+ String name = request.getParameter("username");
+ String age = request.getParameter("age");
+ response.setContentType("text/html");
+ PrintWriter out = response.getWriter();
+ out.println("<html><body>");
+ out.println("<h1>Hello " + name + "</h1>");
+ out.println("<h1>Your age is " + age + "</h1>");
+ out.println("</body></html>");
+ }
+}
+<html>
+<body>
+ <h2>Hello from JSP!</h2>
+ <form acƟon="welcome" method="get">
+ Enter Your Name: <input type="text" name="username"><br>
+ Enter Your Age: <input type="text" name="age"><br>
+ <input type="submit" value="Submit">
+ </form>
+ <h2>Add Two Numbers</h2>
+ <form acƟon="add" method="get">
+ First Number: <input type="text" name="num1"><br>
+ Second Number: <input type="text" name="num2"><br>
+ <input type="submit" value="Add">
+ </form>
+</body>
+</html>
+Add.jsp
+OUTPUTS
+localhost:8080/ServletApp/Add.jsp
+Hello from JSP!
+Enter First Number: 5
+Enter Second Number: 2
+Submit
+localhost:8080/ServletApp/hi
+Hello from Servlet
+Summation of two Number 5 And 2 is 7:
+localho
