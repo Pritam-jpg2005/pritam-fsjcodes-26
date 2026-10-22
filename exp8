@@ -1,0 +1,93 @@
+1 <!DOCTYPE html>
+2 <html lang="en">
+3 <head>
+4
+5
+6
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+7 </head>
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+<body>
+<input type="text" id="email" placeholder="Enter email to validate...">
+<button onclick="validateEmail()">Validate</button>
+<script>
+function validateEmail(){
+const emailEle= document.querySelector("#email");
+let email = emailEle.value;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-ZA-Z]{2,}$/;
+if(emailRegex.test(email)){
+alert("Email Valid");
+21 }
+22 else{
+23 alert("Email Invalid");
+24 }
+25
+26 </script>
+27 </body>
+28 </html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+1 <!DOCTYPE html>
+2 <html lang="en">
+3 <head>
+4
+5
+6
+7 </head>
+8 <body>
+9
+10
+11
+12
+13
+14
+15
+16
+17 }
+18 </script>
+19 </body>
+20 </html>
+<h1 id="title">Hello</h1>
+<button onclick="changeTitle()">Change Title</button>
+<script>
+function changeTitle(){
+let hlEle = document.queryselector("#title");
+h1Ele.innerText = "Welcome";
+h1Ele.style.color = "red";
+Mayuresh437 / Mayuresh-FSJP-Codes
+Code Issues Pull requests Actions Projects
+6
+Security and
+Files Mayuresh-FSJP-Codes / Exp8 /
+main + Q
+Mayuresh437 Delete Exp8/sample.txt
+Go to file T
+Name
+> Exp1
+> Exp2
+> Exp3 index.html
+> Exp4 validateemail.html
+Exp5
+> Еxрб
+Exp8
+index.html
+validateemail.html
+Welcome
+Change Title
+Hello
+Change Title
